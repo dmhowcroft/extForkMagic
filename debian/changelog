@@ -1,0 +1,5 @@
+ext4magic (0.3.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #705413)
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Mon, 15 Apr 2013 16:35:05 -0300
