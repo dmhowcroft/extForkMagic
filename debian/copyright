@@ -6,6 +6,18 @@ Files: *
 Copyright: 2010-2012 Roberto Maar <robi@users.berlios.de>
 License: GPL-2.0+
 
+Files: src/block.c
+Copyright: 1993-1996 Theodore Ts'o <tytso@mit.edu>
+License: GPL-2.0+
+
+Files: src/ext2fsP.h
+Copyright: 1997 Theodore Ts'o <tytso@mit.edu>
+License: GPL-2.0+
+
+Files: src/kernel-jdb.h
+Copyright: 1998-2000 Red Hat, Inc (contact: Stephen C. Tweedie <sct@redhat.com>)
+License: GPL-2.0+
+
 Files: src/magic.h
 Copyright: 2003 Christos Zoulas <christos@zoulas.com>
 License: Simplified BSD License
