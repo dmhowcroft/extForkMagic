@@ -14,7 +14,8 @@ Package: ext4magic
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: recover deleted files from ext3 or ext4 partitions
- ext4magic is a file carver (or file carving).
+ ext4magic is a file carver (or file carving). It can be used when recovering
+ from disasters or in digital forensics activities.
  .
  The deletion of files in ext3/4 filesystems can not be easily reversed. Zero
  out of the block references in the inodes makes that impossible. Experiences
