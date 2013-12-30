@@ -1,3 +1,17 @@
+ext4magic (0.3.1-2) unstable; urgency=medium
+
+  * debian/control:
+      - Bumped Standards-Version from 3.9.4 to 3.9.5.
+      - Updated the Vcs-Git to use canonical URL.
+  * debian/gbp.conf: added to allow git-buildpackage use.
+  * debian/rules:
+      - Added --enable-expert-mode to dh_auto_configure.
+      - Removed some comments.
+  * debian/source/: added an override to reply to check-gpg-signature.
+  * debian/watch: improved.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Mon, 30 Dec 2013 16:42:20 -0200
+
 ext4magic (0.3.1-1) unstable; urgency=low
 
   * Initial release (Closes: #705413)
