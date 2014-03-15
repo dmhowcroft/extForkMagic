@@ -1,3 +1,12 @@
+ext4magic (0.3.1-3) unstable; urgency=medium
+
+  * debian/copyright: updated the packaging years.
+  * debian/source/lintian-overrides: removed as requested by Paul Wise.
+    Thanks to Paul for explanations about the idea of the GPG sign check.
+  * debian/watch: updated. The upstream changed the download path.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Sat, 15 Mar 2014 18:20:10 -0300
+
 ext4magic (0.3.1-2) unstable; urgency=medium
 
   * debian/control:
