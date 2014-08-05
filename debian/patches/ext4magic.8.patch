@@ -1,5 +1,5 @@
 Description: fix hiphens and some errors in manpage.
-Author: Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Author: Joao Eriberto Mota Filho <eriberto@debian.org>
 Last-Update: 2013-04-15
 --- a/src/ext4magic.8
 +++ b/src/ext4magic.8

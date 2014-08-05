@@ -1,5 +1,5 @@
 Description: fix spelling errors.
-Author: Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Author: Joao Eriberto Mota Filho <eriberto@debian.org>
 Last-Update: 2013-12-30
 --- a/src/ext4magic.c
 +++ b/src/ext4magic.c
