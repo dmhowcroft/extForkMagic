@@ -1,3 +1,21 @@
+ext4magic (0.3.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control: updated the homepage field.
+  * debian/copyright:
+      - Fixed a typo in 'src/kernel-jbd.h' name (from jdb to jbd).
+      - Renamed 'Simplified BSD license' to 'BSD-2-clause'.
+      - Updated the upstream email address and download site.
+      - Updated the upstream copyright years.
+  * debian/patches/: removed. The upstream fixed the source code. Thanks
+      to Roberto Maar.
+  * debian/README.Debian: added to provide notices about important URLs.
+  * debian/rules: added the DEB_BUILD_MAINT_OPTIONS variable to fix the
+      issues pointed by blhc.
+  * debian/watch: updated to support the SourceForge.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Mon, 15 Sep 2014 14:32:48 -0300
+
 ext4magic (0.3.1-4) unstable; urgency=medium
 
   * New maintainer email address.

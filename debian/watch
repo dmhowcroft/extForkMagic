@@ -1,2 +1,2 @@
 version=3
-http://sf.net/ext4magic/ext4magic-(\d\S+)\.tar\.(?:bz2|gz|xz)
+https://qa.debian.org/cgi-bin/fakeupstream.cgi?upstream=sf/ext4magic .*download=ext4magic-(\d\S+)\.tar\.(?:bz2|gz|xz)

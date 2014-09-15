@@ -1,0 +1,12 @@
+ext4magic for Debian
+--------------------
+
+The upstream wrote pages that provides important information.
+
+General: http://ext4magic.sourceforge.net/ext4magic_en.html
+
+Doxygen: http://ext4magic.sourceforge.net/doxygen/html/index.html
+
+Pattern: http://ext4magic.sourceforge.net/magic-pattern-interface.html
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Thu, 15 Sep 2014 14:55:17 -0300
