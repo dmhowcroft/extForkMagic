@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2010 by Roberto Maar   *
- *   robi@users.berlios.de *
+ *   Copyright (C) 2010 by Roberto Maar                                    *
+ *   robi6@users.sf.net                                                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -13,9 +13,7 @@
  *   GNU General Public License for more details.                          *
  *                                                                         *
  *   You should have received a copy of the GNU General Public License     *
- *   along with this program; if not, write to the                         *
- *   Free Software Foundation, Inc.,                                       *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.  *
  ***************************************************************************/
 
 
@@ -59,7 +57,7 @@ extern char *optarg;
 #include "block.h"
 
 
-
+char*                           magicfile = NULL;
 ext2_filsys     		current_fs = NULL;
 ext2_ino_t      		root, cwd;
 ext2fs_inode_bitmap 		imap = NULL ;
@@ -627,13 +625,13 @@ while ((c = getopt (argc, argv, "TJRMLlmrSxi:t:j:f:Vd:B:b:a:I:H")) != EOF) {
 				fprintf(stderr,"Error: Invalid parameter: -s  %d\n", superblock);
 				switch (blocksize){
 					case 1024: 
-						fprintf(stderr, "blocksize 1024 posible 8193, 24577, 40961, 57345 ....\n");
+						fprintf(stderr, "blocksize 1024 possible 8193, 24577, 40961, 57345 ....\n");
 						break;
 					case 2048:
-						fprintf(stderr, "blocksize 2048 posible 16384, 49152, 81920, 114688 ....\n");
+						fprintf(stderr, "blocksize 2048 possible 16384, 49152, 81920, 114688 ....\n");
 						break;
 					case 4096:
-						fprintf(stderr, "blocksize 4096 posible 32768, 98304, 163840, 229376 ....\n");
+						fprintf(stderr, "blocksize 4096 possible 32768, 98304, 163840, 229376 ....\n");
 						break;
 					default:
 					  	fprintf(stderr, "blocksize unknown\n");
@@ -721,7 +719,7 @@ while ((c = getopt (argc, argv, "TJRMLlmrSxi:t:j:f:Vd:B:b:a:I:H")) != EOF) {
 #endif
 
 //--------------------------------------------------------------------------------------------
-// check any parameter an options
+// check any parameter and options
 // check time option
 if ((mode && magicscan) || disaster){
 	printf("Warning: Activate magic-scan or disaster-recovery function, may be some command line options ignored\n");
@@ -740,6 +738,21 @@ if ((mode && magicscan) || disaster){
                 		goto errout;
 			}
 			mode |= INPUT_TIME;
+		}
+		magicfile = malloc(64);
+		memset(magicfile,0,64);
+		strncpy (magicfile,"/usr/share/misc/ext4magic",25); 
+		retval = stat (magicfile, &filestat);
+		if (retval){ 
+			strncpy (magicfile,"/usr/local/share/misc/ext4magic",31); 
+			retval = stat (magicfile, &filestat);
+		}
+		if ((! retval) && (S_ISREG(filestat.st_mode) && (! access(magicfile,R_OK)))) {
+			printf("use magic-db on \"%s\"\n",magicfile);
+		}
+		else {
+			free(magicfile);
+			magicfile=NULL;
 		}
 	}
 }
@@ -1183,6 +1196,8 @@ errout:
 	if (bmap) ext2fs_free_inode_bitmap(bmap);
 	imap = NULL;
 	bmap = NULL;
+	if (magicfile) free(magicfile);
+	magicfile = NULL;
         retval = ext2fs_close(current_fs);
         if (retval) {
            fprintf(stderr, "ext2fs_close\n");

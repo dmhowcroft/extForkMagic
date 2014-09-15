@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2010 by Roberto Maar                                    *
- *   robi@users.berlios.de                                                 *
+ *   robi6@users.sf.net                                                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -13,9 +13,7 @@
  *   GNU General Public License for more details.                          *
  *                                                                         *
  *   You should have received a copy of the GNU General Public License     *
- *   along with this program; if not, write to the                         *
- *   Free Software Foundation, Inc.,                                       *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.  *
  *                                                                         *
  *                                                                         *
  *   C Implementation: magic_block_scan                                    * 
@@ -35,6 +33,7 @@
 //#define DEBUG_MAGIC_SCAN
 
 extern ext2_filsys 		current_fs ;
+extern				char* magicfile;
 ext2fs_block_bitmap 		d_bmap = NULL ; 
 
 
@@ -705,7 +704,7 @@ static int magic_check_block(unsigned char* buf,magic_t cookie , magic_t cookie_
 	}
 
 	if (strstr(magic_buf,"application/octet-stream")){
-		char	searchstr[] = "7-zip cpio CD-ROM MPEG 9660 Targa Kernel boot SQLite OpenOffice.org VMWare3 VMware4 JPEG ART PCX IFF DIF RIFF ATSC ScreamTracker matroska LZMA Audio=Visual Sample=Vision ISO=Media ext2 ext3 ext4 LUKS python ESRI=Shape ecryptfs ";
+		char	searchstr[] = "7-zip cpio CD-ROM MPEG 9660 Targa Kernel boot SQLite OpenOffice.org VMWare3 VMware4 JPEG ART PCX IFF DIF RIFF ATSC ScreamTracker matroska LZMA Audio=Visual Sample=Vision ISO=Media ext2 ext3 ext4 LUKS python ESRI=Shape ecryptfs Matlab=v5 ";
 		p_search = searchstr;
 		while (*p_search){
 			len=0;
@@ -733,6 +732,11 @@ static int magic_check_block(unsigned char* buf,magic_t cookie , magic_t cookie_
 			else{
 				if((!strstr(magic_buf,"x-archive")) &&((strstr(magic_buf,"x-elc") || strstr(magic_buf,"keyring") || strstr(magic_buf,"x-arc")||strstr(magic_buf,"keystore")||strstr(magic_buf,"x-123")||
 				strstr(magic_buf,"fontobject")))){ //FIXME fontobject
+					//conflict x-123 <-> Targa on many file-versions
+					if (strstr(magic_buf,"x-123") && (strstr(text,"Targa"))){
+						strncpy(magic_buf,text,60);
+						retval |= ( M_APPLI | M_ARCHIV | M_CLASS_1 );
+					}else
 					retval = M_DATA;
 				}
 				else {
@@ -1364,7 +1368,7 @@ blk[0] = 1;
 cookie = magic_open(MAGIC_MIME | MAGIC_NO_CHECK_COMPRESS | MAGIC_NO_CHECK_ELF | MAGIC_CONTINUE);
 cookie_f = magic_open(MAGIC_NO_CHECK_COMPRESS | MAGIC_NO_CHECK_ELF | MAGIC_RAW );
 
-if ((! cookie) ||  magic_load(cookie, NULL) || (! cookie_f) || magic_load(cookie_f, NULL)){
+if ((! cookie) ||  magic_load(cookie, magicfile) || (! cookie_f) || magic_load(cookie_f, magicfile)){
 	fprintf(stderr,"ERROR: can't find libmagic\n");
 	goto errout;
 }
