@@ -1,11 +1,12 @@
-AC_INIT(configure.in)
+AC_INIT(configure.ac)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(ext4magic, 0.3.1)
+AM_INIT_AUTOMAKE(ext4magic, 0.3.2)
 
 AC_LANG_C
 AC_PROG_CC
+AM_PROG_CC_C_O
 AM_PROG_LIBTOOL
 
 fail=0
