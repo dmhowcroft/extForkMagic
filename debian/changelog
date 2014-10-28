@@ -1,3 +1,9 @@
+ext4magic (0.3.2-2) unstable; urgency=medium
+
+  * Bumped Standards-Version to 3.9.6.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 26 Oct 2014 19:52:20 -0200
+
 ext4magic (0.3.2-1) unstable; urgency=medium
 
   * New upstream release.

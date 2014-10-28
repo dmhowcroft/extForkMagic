@@ -5,7 +5,7 @@ Maintainer: Debian Forensics <forensics-devel@lists.alioth.debian.org>
 Uploaders: Joao Eriberto Mota Filho <eriberto@debian.org>
 Build-Depends: debhelper (>= 9), autotools-dev, e2fslibs-dev,
                libblkid-dev, libbz2-dev, libmagic-dev, zlib1g-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://ext4magic.sf.net/ext4magic_en.html
 Vcs-Git: git://anonscm.debian.org/forensics/ext4magic.git
 Vcs-Browser: http://anonscm.debian.org/cgit/forensics/ext4magic.git
