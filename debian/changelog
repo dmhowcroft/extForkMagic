@@ -1,3 +1,12 @@
+ext4magic (0.3.2-3) unstable; urgency=medium
+
+  * debian/patches/fix-recover-examine.patch: added as a temporary work
+      around to fix an issue which makes impossible to recover or examine
+      Ext4 filesystems. Thanks to Roberto Maar <robi6@users.sf.net>, the
+      ext4magic upstream. (see #802089 for more details)
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sun, 29 Nov 2015 22:49:23 -0200
+
 ext4magic (0.3.2-2) unstable; urgency=medium
 
   * Bumped Standards-Version to 3.9.6.
