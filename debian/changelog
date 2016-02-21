@@ -1,3 +1,21 @@
+ext4magic (0.3.2-4) unstable; urgency=medium
+
+  * New co-maintainer. Thanks a lot to Eriberto Mota, the initial
+    maintainer of this package.
+  * debian/control
+      - Bumped Standards-Version to 3.9.7.
+      - Fixed a word in long description.
+      - Updated Vcs-* fields.
+  * debian/copyright:
+      - Added my name at debian/* block.
+      - Dropped dot-zero from GPL license short name.
+      - Fixed the packaging years for the last maintainer.
+  * debian/patches/fix-spelling-manpage: added to fix some spelling
+    errors in manpage.
+  * debian/watch: updated.
+
+ -- Giovani Augusto Ferreira <giovani@riseup.net>  Sat, 20 Feb 2016 23:20:11 -0200
+
 ext4magic (0.3.2-3) unstable; urgency=medium
 
   * debian/patches/fix-recover-examine.patch: added as a temporary work

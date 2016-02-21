@@ -1,0 +1,18 @@
+Description: fix some spelling errors in manpages.
+Author: Giovani Augusto Ferreira <giovani@riseup.net>
+Last-Update: 2016-02-20
+Index: ext4magic-0.3.2/src/ext4magic.8
+===================================================================
+--- ext4magic-0.3.2.orig/src/ext4magic.8
++++ ext4magic-0.3.2/src/ext4magic.8
+@@ -18,8 +18,8 @@ filesystem Journal. ext4magic can extrac
+ Journal, and can restore files in entire directory trees, provided that
+ the information in the Journal are sufficient. This tool can recover
+ the most file types, can recover large and sparse files, 
+-recovered files with orginal filename, with the orginal owner an
+-group, the orginal file mode bits, and also the old atime/mtime stamp.
++recovered files with original filename, with the original owner an
++group, the original file mode bits, and also the old atime/mtime stamp.
+ 
+ The filesystem Journal has a very different purpose, and it will not
+ be possible to recover any file at any time. Many factors affects which data and how

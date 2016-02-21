@@ -2,13 +2,13 @@ Source: ext4magic
 Section: utils
 Priority: optional
 Maintainer: Debian Forensics <forensics-devel@lists.alioth.debian.org>
-Uploaders: Joao Eriberto Mota Filho <eriberto@debian.org>
+Uploaders: Giovani Augusto Ferreira <giovani@riseup.net>
 Build-Depends: debhelper (>= 9), autotools-dev, e2fslibs-dev,
                libblkid-dev, libbz2-dev, libmagic-dev, zlib1g-dev
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Homepage: http://ext4magic.sf.net/ext4magic_en.html
-Vcs-Git: git://anonscm.debian.org/forensics/ext4magic.git
-Vcs-Browser: http://anonscm.debian.org/cgit/forensics/ext4magic.git
+Vcs-Git: https://anonscm.debian.org/forensics/ext4magic.git
+Vcs-Browser: https://anonscm.debian.org/cgit/forensics/ext4magic.git
 
 Package: ext4magic
 Architecture: any
@@ -25,5 +25,5 @@ Description: recover deleted files from ext3 or ext4 partitions
  ext4magic can extract the information from the journal and restore files in an
  entire directory tree, if the information in the journal are sufficient.
  .
- This tool can recover the most file types, with orginal filename, owner and
+ This tool can recover the most file types, with original filename, owner and
  group, file mode bits and also the old atime/mtime stamps.
