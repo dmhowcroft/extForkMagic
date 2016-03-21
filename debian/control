@@ -7,8 +7,8 @@ Build-Depends: debhelper (>= 9), autotools-dev, e2fslibs-dev,
                libblkid-dev, libbz2-dev, libmagic-dev, zlib1g-dev
 Standards-Version: 3.9.7
 Homepage: http://ext4magic.sf.net/ext4magic_en.html
-Vcs-Git: https://anonscm.debian.org/forensics/ext4magic.git
-Vcs-Browser: https://anonscm.debian.org/cgit/forensics/ext4magic.git
+Vcs-Git: https://anonscm.debian.org/git/forensics/ext4magic.git
+Vcs-Browser: https://anonscm.debian.org/git/forensics/ext4magic.git
 
 Package: ext4magic
 Architecture: any

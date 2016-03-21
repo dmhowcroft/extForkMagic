@@ -5,7 +5,7 @@ Index: ext4magic-0.3.2/src/ext4magic.8
 ===================================================================
 --- ext4magic-0.3.2.orig/src/ext4magic.8
 +++ ext4magic-0.3.2/src/ext4magic.8
-@@ -18,8 +18,8 @@ filesystem Journal. ext4magic can extrac
+@@ -18,13 +18,13 @@ filesystem Journal. ext4magic can extrac
  Journal, and can restore files in entire directory trees, provided that
  the information in the Journal are sufficient. This tool can recover
  the most file types, can recover large and sparse files, 
@@ -16,3 +16,36 @@ Index: ext4magic-0.3.2/src/ext4magic.8
  
  The filesystem Journal has a very different purpose, and it will not
  be possible to recover any file at any time. Many factors affects which data and how
+ long the data store in the Journal. Read the ext4magic documentation for more
+-extensive information about the filesytem Journal.
++extensive information about the filesystem Journal.
+ 
+ 
+ 
+@@ -140,7 +140,7 @@ With the option
+ it print a copy of the filesystem data block with this transaction number from the Journal.
+ 
+ .B
+-# ext4magic /dir/filesytem.iso \-B 97 \-t 22
++# ext4magic /dir/filesystem.iso \-B 97 \-t 22
+ 
+ print a hexdump of the copy from filesystem block number 97, which has been writing to the Journal with the transaction number 22. All copies of a particular data block in the Journal and the associated transaction numbers you can find with the optional Option
+ .B
+@@ -239,7 +239,7 @@ Expert Options:
+ by configure. This makes it possible to open and recover front corrupted file systems. 
+ In the current version it is possible to address backup superblocks 
+ and the attempt to recover of the Journal address from the data of the super block, and recover all undamaged files
+-after the filesytem was partially damaged or overwritten. 
++after the filesystem was partially damaged or overwritten. 
+ 
+ .TP
+ .B
+@@ -391,7 +391,7 @@ optional you can select a external copy
+ select the output directory. There, the recovered files were written. If it does not exist, it is created. By default, created files are written to the subdirectory "
+ .B
+ RECOVERDIR
+-" in the workpath of the actual shell. This output directory can not be on the same filesystem to be tested filesytem, and should have sufficient space to write the recovered files. The filesystem on this directory should be also ext3/4, otherwise, not LINUX like filesytems generate some errors while writing the file properties.
++" in the workpath of the actual shell. This output directory can not be on the same filesystem to be tested filesystem, and should have sufficient space to write the recovered files. The filesystem on this directory should be also ext3/4, otherwise, not LINUX like filesystems generate some errors while writing the file properties.
+ Either you must first changed with the shell in such a suitable filesystem, or you must specify the
+ .B
+ \-d 

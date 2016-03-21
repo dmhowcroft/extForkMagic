@@ -1,3 +1,2 @@
-version=3
-
+version=4
 http://sf.net/ext4magic/ext4magic-(\d\S+)\.tar\.(?:bz2|gz|xz)

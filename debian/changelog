@@ -1,3 +1,12 @@
+ext4magic (0.3.2-5) unstable; urgency=medium
+
+  * debian/control: Changed from cgit to git in Vcs-Browser field.
+  * debian/patches/fix-spelling-manpage: updated to fix more spelling
+    errors in manpage.
+  * debian/watch: bumped to version 4.
+
+ -- Giovani Augusto Ferreira <giovani@riseup.net>  Sun, 20 Mar 2016 23:17:24 -0300
+
 ext4magic (0.3.2-4) unstable; urgency=medium
 
   * New co-maintainer. Thanks a lot to Eriberto Mota, the initial
