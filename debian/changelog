@@ -1,3 +1,14 @@
+ext4magic (0.3.2-6) unstable; urgency=medium
+
+  * debian/control:
+      - Bumped Standards-Version to 3.9.8.
+  * debian/patches:
+      - Added the '.patch' extension to all patches.
+      - fix-spelling-manpage.patch:
+          ~ Added a typing error correction for ext4magic.8.
+
+ -- Giovani Augusto Ferreira <giovani@riseup.net>  Sat, 24 Sep 2016 19:54:39 -0300
+
 ext4magic (0.3.2-5) unstable; urgency=medium
 
   * debian/control: Changed from cgit to git in Vcs-Browser field.

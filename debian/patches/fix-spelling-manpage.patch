@@ -1,6 +1,6 @@
 Description: fix some spelling errors in manpages.
 Author: Giovani Augusto Ferreira <giovani@riseup.net>
-Last-Update: 2016-02-20
+Last-Update: 2016-09-24
 Index: ext4magic-0.3.2/src/ext4magic.8
 ===================================================================
 --- ext4magic-0.3.2.orig/src/ext4magic.8
@@ -31,6 +31,15 @@ Index: ext4magic-0.3.2/src/ext4magic.8
  
  print a hexdump of the copy from filesystem block number 97, which has been writing to the Journal with the transaction number 22. All copies of a particular data block in the Journal and the associated transaction numbers you can find with the optional Option
  .B
+@@ -162,7 +162,7 @@ n
+ is the Inode number. Without any other option, the output is the content of the real filesystem Inode. With a optional 
+ .B
+ \-x 
+-additional output of a list of all data blocks addressed by this Inode. If Inode is a directory Inode, the content of the directory entrys also printed. 
++additional output of a list of all data blocks addressed by this Inode. If Inode is a directory Inode, the content of the directory entries also printed. 
+ 
+ 
+ Together with one of the following option
 @@ -239,7 +239,7 @@ Expert Options:
  by configure. This makes it possible to open and recover front corrupted file systems. 
  In the current version it is possible to address backup superblocks 
@@ -49,3 +58,12 @@ Index: ext4magic-0.3.2/src/ext4magic.8
  Either you must first changed with the shell in such a suitable filesystem, or you must specify the
  .B
  \-d 
+@@ -510,7 +510,7 @@ recovers directory tree, is the same as
+ 
+ But two very important differences: 
+ Recover of all matched Inodes, even if the blocks allocated, 
+-and recover if possible the old directory properties. Also empty dirctories will be restored. 
++and recover if possible the old directory properties. Also empty directories will be restored. 
+ This recovers all deleted and all undeleted files, and it's possible to recover older file versions or directory versions.
+ 
+ In completely deleted directories the behavior "
