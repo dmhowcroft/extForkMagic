@@ -1,3 +1,12 @@
+ext4magic (0.3.2-7) unstable; urgency=medium
+
+  * Update DH level to 10.
+  * debian/compat: updated to 10.
+  * debian/rules: removed the '--with autoreconf' because it is default
+    in DH 10.
+
+ -- Giovani Augusto Ferreira <giovani@riseup.net>  Fri, 16 Dec 2016 23:04:41 -0200
+
 ext4magic (0.3.2-6) unstable; urgency=medium
 
   * debian/control:
