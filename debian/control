@@ -1,7 +1,7 @@
 Source: ext4magic
 Section: utils
 Priority: optional
-Maintainer: Debian Forensics <forensics-devel@lists.alioth.debian.org>
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Uploaders: Giovani Augusto Ferreira <giovani@riseup.net>
 Build-Depends: debhelper (>= 10), autotools-dev, e2fslibs-dev,
                libblkid-dev, libbz2-dev, libmagic-dev, zlib1g-dev
