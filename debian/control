@@ -3,7 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
 Uploaders: Giovani Augusto Ferreira <giovani@debian.org>
-Build-Depends: debhelper (>= 11), autotools-dev, e2fslibs-dev,
+Build-Depends: debhelper (>= 11), e2fslibs-dev,
                libblkid-dev, libbz2-dev, libmagic-dev, zlib1g-dev
 Standards-Version: 4.1.4
 Homepage: http://ext4magic.sf.net/ext4magic_en.html
