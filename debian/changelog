@@ -1,4 +1,4 @@
-ext4magic (0.3.2-9) UNRELEASED; urgency=medium
+ext4magic (0.3.2-9) unstable; urgency=medium
 
   [ Raphaël Hertzog ]
   * Update team maintainer address to Debian Security Tools
@@ -18,22 +18,10 @@ ext4magic (0.3.2-9) UNRELEASED; urgency=medium
 
  -- Giovani Augusto Ferreira <giovani@debian.org>  Tue, 15 May 2018 11:43:25 -0300
 
-ext4magic (0.3.2-8) unstable; urgency=medium
+ext4magic (0.3.2-8) UNRELEASED; urgency=medium
 
-  [ Raphaël Hertzog ]
-  * Update team maintainer address to Debian Security Tools <team+pkg-security@tracker.debian.org>
-  * Update Vcs-Git and Vcs-Browser for the move to salsa.debian.org
-
-  [ Hilko Bengen ]
-  * Add patch to fix FTBFS with new e2fsprogs (Closes: #894649)
-
-  [ Giovani Augusto Ferreira ]
-  * Update my email address
-  * Update to https Format URI
-  * Bumped DH level to 11
-  * Bumped Standards-Version to 4.1.4
-  * Removed unnecessary dh argument and removed autoreconf build-depends
-  * Added a head for the patch
+  * unreleased packaging revision because it was
+    mistakenly duplicated with revision 9
 
  -- Giovani Augusto Ferreira <giovani@debian.org>  Tue, 15 May 2018 10:59:39 -0300
 
