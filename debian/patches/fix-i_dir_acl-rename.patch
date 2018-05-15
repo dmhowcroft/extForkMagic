@@ -1,3 +1,6 @@
+Description: Fix FTBFS with new e2fsprogs.
+Author: Hilko Bengen <bengen@debian.org>
+Last-Update: 2018-04-13
 Index: ext4magic/src/inode.c
 ===================================================================
 --- ext4magic.orig/src/inode.c
