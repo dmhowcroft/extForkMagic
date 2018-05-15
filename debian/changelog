@@ -1,3 +1,9 @@
+ext4magic (0.3.2-10) unstable; urgency=medium
+
+  * debian/changelog: fixed Debian version not released
+
+ -- Giovani Augusto Ferreira <giovani@debian.org>  Tue, 15 May 2018 15:19:11 -0300
+
 ext4magic (0.3.2-9) unstable; urgency=medium
 
   [ Raphaël Hertzog ]
