@@ -2,7 +2,7 @@ Source: ext4magic
 Section: utils
 Priority: optional
 Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
-Uploaders: Giovani Augusto Ferreira <giovani@riseup.net>
+Uploaders: Giovani Augusto Ferreira <giovani@debian.org>
 Build-Depends: debhelper (>= 10), autotools-dev, e2fslibs-dev,
                libblkid-dev, libbz2-dev, libmagic-dev, zlib1g-dev
 Standards-Version: 3.9.8
