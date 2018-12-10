@@ -1,0 +1,35 @@
+Description: fix some spelling errors in screen messages
+Author: Joao Eriberto Mota Filho <eriberto@debian.org>
+Forwarded: https://sourceforge.net/p/ext4magic/tickets/11/
+Last-Update: 2018-12-10
+Index: ext4magic/src/ext4magic.c
+===================================================================
+--- ext4magic.orig/src/ext4magic.c
++++ ext4magic/src/ext4magic.c
+@@ -323,7 +323,7 @@ errout:
+ 
+ //subfunction for main
+ void print_modus_error(){
+-	char message0[] = "Invalide parameter : only input of one modus allowed [ -M | -m | -R | -r | -L | -l | -H | D ]\n";
++	char message0[] = "Invalid parameter : only input of one modus allowed [ -M | -m | -R | -r | -L | -l | -H | D ]\n";
+ 	fprintf(stderr,"%s",message0);
+ }
+ 
+@@ -762,7 +762,7 @@ if ((mode && magicscan) || disaster){
+ if (mode & INPUT_TIME){
+ 	if (! ((t_after > 315601200) && (t_after < t_before))) // 315601200 = "1980-01-01 20:00:00"
+ 		{
+-		  fprintf(stderr,"Invalide parameter: range \"AFTER <--> BEFORE\"\n");
++		  fprintf(stderr,"Invalid parameter: range \"AFTER <--> BEFORE\"\n");
+ 		  fprintf(stderr,"the automatic default parameter AFTER=\"now -1 day\" ; BEFORE=\"now\"\n");
+ 		  fprintf(stderr,"\"-b before-timestamp\" must greater then \"-a after-timestamp\"\n"); 
+ 		  fprintf(stderr,"Example : %s -H -b $(date +%%s) -a $(date -d \"-1 day\" +%%s) %s\n",progname,current_fs->device_name);
+@@ -770,7 +770,7 @@ if (mode & INPUT_TIME){
+                   goto errout;
+ 	}
+ 	if (mode & PRINT_TRANSACTION){
+-		  fprintf(stderr,"Invalide parameter: use either Transaction-Nr or Timestamps for search in Journal\n");
++		  fprintf(stderr,"Invalid parameter: use either Transaction-Nr or Timestamps for search in Journal\n");
+  		  exitval = EXIT_FAILURE ; 
+                   goto errout;
+ 	}
