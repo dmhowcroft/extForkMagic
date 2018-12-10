@@ -2,6 +2,9 @@ ext4magic (0.3.2-11) unstable; urgency=medium
 
   * Team upload.
   * debian/control: bumped Standards-Version to 4.2.1.
+  * debian/copyright:
+      - Added rights for Hilko Bengen and Raphaël Hertzog.
+      - Updated packaging copyright years.
   * debian/patches/:
       - fix-FTBFS-with-glibc-2.28.patch: added to fix a FTBFS. (Closes: #916064)
       - fix-spelling.patch: added to fix a wrong word shown in screen.

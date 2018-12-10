@@ -23,8 +23,10 @@ Copyright: 2003 Christos Zoulas <christos@zoulas.com>
 License: BSD-2-clause
 
 Files: debian/*
-Copyright: 2013-2015 Joao Eriberto Mota Filho <eriberto@debian.org>
+Copyright: 2013-2018 Joao Eriberto Mota Filho <eriberto@debian.org>
            2016-2018 Giovani Augusto Ferreira <giovani@debian.org>
+           2018      Hilko Bengen <bengen@debian.org>
+           2018      Raphaël Hertzog <hertzog@debian.org>
 License: GPL-2+
 
 License: GPL-2+
