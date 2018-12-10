@@ -1,0 +1,22 @@
+Description: fix FTBFS with glibc 2.28
+Author: Joao Eriberto Mota Filho <eriberto@debian.org>
+Bug: https://sourceforge.net/p/ext4magic/tickets/4/
+Bug-Debian: https://bugs.debian.org/916064
+Last-Update: 2018-12-10
+Index: ext4magic/src/recover.c
+===================================================================
+--- ext4magic.orig/src/recover.c
++++ ext4magic/src/recover.c
+@@ -20,10 +20,11 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ #include <stdlib.h>
+-#include <sys/stat.h> 
++#include <sys/stat.h>
+ #include <errno.h>
+ #include <fcntl.h>
+ #include <utime.h>
++#include <sys/sysmacros.h>
+ 
+ #ifndef O_LARGEFILE
+ #define O_LARGEFILE 0
