@@ -1,4 +1,5 @@
 Test-Command: ext4magic -V
+Restrictions: needs-root
 
 Test-Command: ext4magic debian/tests/test.img -M -d $AUTOPKGTEST_TMP
 Restrictions: needs-root
