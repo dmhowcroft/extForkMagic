@@ -20,7 +20,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <sys/stat.h> 
+#include <sys/stat.h>
+#include <sys/sysmacros.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <utime.h>
